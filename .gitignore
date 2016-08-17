@@ -7,6 +7,8 @@
 *.o
 *.so
 *.pyc
+*-compiled.js
+*-compiled.js.map
 
 # Packages #
 ############
