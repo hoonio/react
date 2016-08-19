@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  client:
+    build: .
+    image: hoonio/react:latest
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: 'production'
+      PORT: '8080'
