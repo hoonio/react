@@ -5,8 +5,8 @@ export default (state = { ready: false, page: 'home', data:[] }, action) => {
     case CHANGING_PAGE:
       return Object.assign({}, state, {
         page: action.status
-      })
+      });
     default:
-      return state
+      return state;
   }
-}
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
 import { changeState } from '../../actions';
@@ -27,16 +27,18 @@ class HomePage extends React.Component {
 HomePage.propTypes = {
   status: React.PropTypes.string.isRequired,
   changeState: React.PropTypes.func.isRequired
-}
+};
 
 const mapStateToProps = (state) => {
-  return { status: state.appstate.page }
-}
+  return { status: state.appstate.page };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeState: (pagename) => { dispatch(changeState(pagename)) }
-  }
-}
+    changeState: (pagename) => {
+       dispatch(changeState(pagename));
+    }
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage)
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

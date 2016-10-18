@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { createStore, compose, applyMiddleware, combineReducers } from 'redux'
+import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { routerReducer, routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
-import thunkMiddleware from 'redux-thunk'
+import thunkMiddleware from 'redux-thunk';
 
 import routes from './routes';
 import appstate from './reducers';
@@ -20,9 +20,9 @@ const store = createStore(
       routerMiddleware(history) // logs actions
     )
   )
-)
+);
 
-const history = syncHistoryWithStore(browserHistory, store)
+const history = syncHistoryWithStore(browserHistory, store);
 
 render(
   <Provider store={store}>
